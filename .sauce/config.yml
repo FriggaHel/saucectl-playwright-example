@@ -18,12 +18,8 @@ playwright:
 # Controls what files are available in the context of a test run (unless explicitly excluded by .sauceignore).
 rootDir: ./
 suites:
-  - name: "Firefox"
-    platformName: "Windows 10" # Only relevant when running a test against the sauce cloud (--test-env sauce).
-    testMatch: '**/*.js'
-    params:
-      browserName: "firefox"
   - name: "Chromium"
+    mode: sauce
     platformName: "Windows 10"
     testMatch: '**/*.js'
     params:
