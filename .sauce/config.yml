@@ -24,3 +24,11 @@ suites:
     testMatch: '**/*.js'
     params:
       browserName: "chromium"
+
+# Controls what artifacts to fetch when the suite on Sauce Cloud has finished.
+artifacts:
+  download:
+    when: always
+    match:
+      - "*.xml"
+    directory: ./artifacts/
